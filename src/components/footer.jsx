@@ -10,6 +10,7 @@ const Footer = ({ ...props }) => {
       {...props}
       bg={MyColor.dark}
       w="100%"
+      h="100%"
       p={3}
     >
       <StyledHeading fontSize="2em" align="center">
@@ -35,7 +36,7 @@ const Footer = ({ ...props }) => {
           bgColor="white"
           target="_blank"
         />
-    
+
         <SocialIcon
           url="https://id.linkedin.com/in/gabriel-sebastian-hidayat-b7138a210"
           network="linkedin"
