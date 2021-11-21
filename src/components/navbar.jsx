@@ -127,7 +127,7 @@ const Navbar = () => {
             <MenuItem _hover={{ bg: MyColors.dark }}>
               <Box width="100%">
                 <ChakraLink 
-                  href="https://github.com/yeyee2901/portofolio-website" 
+                  href="https://github.com/yeyee2901/my-website" 
                   target="_blank" 
                   _hover={{ textDecoration: "none" }}>
                   <StyledHeading
