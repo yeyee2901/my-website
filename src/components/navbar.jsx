@@ -55,18 +55,18 @@ const Navbar = () => {
         alignItems="end"
       >
         <HStack>
-              <LinkItem href="/">
-                Home
-              </LinkItem>
-              <LinkItem href="/works">
-                Works
-              </LinkItem>
-              <LinkItem href="/About">
-                About
-              </LinkItem>
+          <LinkItem href="/">
+            Home
+          </LinkItem>
+          <LinkItem href="/works">
+            Works
+          </LinkItem>
+          <LinkItem href="/About">
+            About
+          </LinkItem>
           <Box width="100%">
             <ChakraLink
-              href="https://github.com/yeyee2901/portofolio-website"
+              href="https://github.com/yeyee2901/my-website"
               target="_blank"
               _hover={{ textDecoration: "none" }}
             >
@@ -126,9 +126,9 @@ const Navbar = () => {
             </MenuItem>
             <MenuItem _hover={{ bg: MyColors.dark }}>
               <Box width="100%">
-                <ChakraLink 
-                  href="https://github.com/yeyee2901/my-website" 
-                  target="_blank" 
+                <ChakraLink
+                  href="https://github.com/yeyee2901/my-website"
+                  target="_blank"
                   _hover={{ textDecoration: "none" }}>
                   <StyledHeading
                     as="h4"
