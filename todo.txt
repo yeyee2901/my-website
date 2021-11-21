@@ -1,0 +1,4 @@
+- (DONE) ADD menu list for navbar on mobile devices
+- (DONE) IMPORT font
+- (ON PROGRESS): fill in home-page
+- Create footer, content: social media connect
