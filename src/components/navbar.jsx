@@ -1,6 +1,6 @@
 /* NAVBAR
   * Navbar terdiri dari 2 mode, yaitu untuk view mobile & desktop
-  * - Desktop: tampil di top, active = diberi bg kuning
+  * - Desktop: tampil di top, active = diberi bg terang
   * - Mobile: di hide di menu list (icon: hamburger)
   * */
 import StyledHeading from '../components/styled_heading'
@@ -86,7 +86,7 @@ const Navbar = () => {
         display={{ base: 'inline-flex', md: 'none' }}
         justifyContent="space-between"
       >
-        <StyledHeading fontSize="2.3em" bg={MyColors.very_dark}>
+        <StyledHeading fontSize="1.7em" bg={MyColors.very_dark}>
           <Link to="/">
             Yeyee&apos;s Homepage
           </Link>
