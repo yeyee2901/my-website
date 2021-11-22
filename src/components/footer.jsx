@@ -1,6 +1,5 @@
 import { Box, Container, Text } from '@chakra-ui/react'
 import { SocialIcon } from 'react-social-icons'
-import BoxSection from './box_section'
 import MyColor from '../colors'
 import StyledHeading from './styled_heading'
 
