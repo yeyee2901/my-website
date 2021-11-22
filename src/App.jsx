@@ -5,8 +5,7 @@ import About from './pages/about'
 import Works from './pages/works'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import { Box } from '@chakra-ui/react'
-import { useEffect } from 'react'
+import { useEffect, useCallback } from 'react'
 
 const Main = () => {
   const location = useLocation()
@@ -14,10 +13,11 @@ const Main = () => {
   // to check if route is changed
   // this will avoid visual bug that I encounter
   // during page transition
-  const on_page_change = () => {
-    scroll(0, 0)
-  }
-  useEffect(on_page_change, [location.pathname])
+  useEffect(
+    useCallback(() => scroll(0, 0)),
+    [location.pathname]
+  )
+
 
   return (
     <>
