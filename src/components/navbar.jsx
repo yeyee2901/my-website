@@ -14,7 +14,7 @@ import {
   Link as ChakraLink
 } from '@chakra-ui/react'
 
-const LinkItem = ({ children, href }) => {
+const LinkItem = ({ children, href, ...props }) => {
   const is_active = useLocation().pathname === href
   const active_bg = is_active ? MyColors.active : MyColors.dark
   const active_color = is_active ? "black" : "white"
@@ -29,6 +29,7 @@ const LinkItem = ({ children, href }) => {
           borderRadius="lg"
           p={2}
           align="center"
+          {...props}
         >
           {children}
         </StyledHeading>
@@ -71,6 +72,7 @@ const Navbar = () => {
                 bg={MyColors.dark}
                 p={2}
                 align="center"
+                minW="130px"
               >
                 Page Source
               </StyledHeading>
@@ -132,11 +134,9 @@ const Navbar = () => {
                   target="_blank"
                   _hover={{ textDecoration: "none" }}>
                   <StyledHeading
-                    as="h4"
                     size="m"
                     color="white"
                     bg={MyColors.dark}
-                    borderRadius="lg"
                     p={2}
                     align="center"
                   >
@@ -144,7 +144,6 @@ const Navbar = () => {
                   </StyledHeading>
                 </ChakraLink>
               </Box>
-
             </MenuItem>
           </MenuList>
         </Menu>
