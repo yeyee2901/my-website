@@ -8,12 +8,12 @@ const Footer = ({ ...props }) => {
   return (
     <Box
       {...props}
-      bg={MyColor.dark}
+      bg={MyColor.very_dark}
       w="100%"
       h="100%"
       p={3}
     >
-      <StyledHeading fontSize="2em" align="center">
+      <StyledHeading fontSize="2em" align="center" bg={MyColor.very_dark}>
         Find me on:
       </StyledHeading>
 

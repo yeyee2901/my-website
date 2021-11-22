@@ -10,13 +10,9 @@ import { HamburgerIcon } from '@chakra-ui/icons'
 import {
   Box,
   HStack,
-  MenuButton,
-  Menu,
-  MenuList,
-  MenuItem,
+  MenuButton, Menu, MenuList, MenuItem,
   Link as ChakraLink
 } from '@chakra-ui/react'
-
 
 const LinkItem = ({ children, href }) => {
   const is_active = useLocation().pathname === href
@@ -39,14 +35,13 @@ const LinkItem = ({ children, href }) => {
       </Link>
     </Box>
   )
-
 }
 
 
 const Navbar = () => {
 
   return (
-    <Box p={3} bg={MyColors.dark}>
+    <Box p={3} bg={MyColors.very_dark}>
       <Box
         pt={1}
         width="100%"
@@ -85,11 +80,17 @@ const Navbar = () => {
       </Box>
 
       <Box
+        p={2}
         width='100%'
-        display={{ base: 'flex', md: 'none' }}
-        flexDir={{ base: 'column', md: 'row' }}
-        alignItems='end'
+        borderRadius="lg"
+        display={{ base: 'inline-flex', md: 'none' }}
+        justifyContent="space-between"
       >
+        <StyledHeading fontSize="2.3em" bg={MyColors.very_dark}>
+          <Link to="/">
+            Yeyee&apos;s Homepage
+          </Link>
+        </StyledHeading>
         <Menu autoSelect={false}>
           <MenuButton
             color="white"
