@@ -12,6 +12,9 @@ const Footer = ({ ...props }) => {
       w="100%"
       h="100%"
       p={3}
+      display="flex"
+      flexDir="column"
+      justifyContent="space-around"
     >
       <StyledHeading fontSize="2em" align="center" bg={MyColor.very_dark}>
         Find me on:
@@ -52,6 +55,10 @@ const Footer = ({ ...props }) => {
         />
 
       </Container>
+
+      <Text as="p" align="center" mt={5}>
+        Copyright &copy; 2021 @ yeyee2901
+      </Text>
     </Box>
   )
 }
