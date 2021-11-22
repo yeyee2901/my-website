@@ -1,5 +1,5 @@
 import StyledHeading from '../components/styled_heading'
-import { Box, Image, VStack } from '@chakra-ui/react'
+import { Box, Image, VStack, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import MyColors from '../colors'
 
@@ -34,6 +34,13 @@ const Header = () => (
           borderRadius="full"
         />
       </Box>
+
+      <Text as="strong" fontSize="2.2em" color="white"
+        bgGradient="linear(to-r, blue.500, teal.200)"
+        bgClip="text"
+      >
+        Gabriel Sebastian Hidayat
+      </Text>
 
       <Box
         borderRadius="lg"
