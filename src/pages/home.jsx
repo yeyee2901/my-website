@@ -44,7 +44,8 @@ const Home = () => {
             borderRadius="lg"
           />, with telecommunication as my main focus of study.
           In my study, I have gained a huge interest towards programming, and embedded
-          systems. I&apos;m also confident in my skills in playing guitar & piano.
+          systems design, and PCB design. I&apos;m a bit kind of introverted, but I will try
+          to keep up with other people! *and also, I can play a bit of guitar & piano
         </Text>
 
         <Box
@@ -62,15 +63,25 @@ const Home = () => {
           My Campus
         </StyledHeading>
 
-        <Box p={4}>
-          <ul>
-            <li>Guitar player since 14 yo</li>
-            <li>Piano player since 9 yo</li>
-            <li>C, Python, PHP, Javascript, Linux</li>
-          </ul>
-        </Box>
       </BoxSection>
 
+      <BoxSection mb={4}>
+        <Text as="strong" fontSize="2em" color="white">
+          Favorites
+        </Text>
+        <Box p={4}>
+          <ul>
+            <li>Guitar (fingerstyle, metal, rock & shred) 🎸</li>
+            <li>Piano 🎹</li>
+            <li>Sugarless Coffee 🍵</li>
+            <li>Dogs 🐕</li>
+            <li>PCB design (≖ᴗ≖๑)</li>
+            <li>Embedded Systems 🤖</li>
+            <li>Linux 🐧</li>
+          </ul>
+        </Box>
+
+      </BoxSection>
     </>
   )
 }
