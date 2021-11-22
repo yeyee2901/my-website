@@ -52,6 +52,18 @@ const Works = () => {
           with library dplyr & ggplot.
         </Text>
       </WorkBox>
+
+      <WorkBox title="Fedoo-Files" link="https://github.com/yeyee2901/fedooo-files">
+        <Box mb={2} mt={2} maxW="90%">
+          <Image src="https://user-images.githubusercontent.com/55247343/142818398-c57ede17-50e5-4e74-9780-c956d7adc709.png" />
+        </Box>
+        <Text as="p" maxW="90%">
+          My simple & minimalistic dotfile configuration files for Fedora 35 -
+          i3 edition. Alacritty, Kitty, Neovim 0.5 (with LSP, Treesitter, Telescope,
+          etc), Tmux, Rofi, i3 window manager, polybar status bar. Comes with easy
+          install script.
+        </Text>
+      </WorkBox>
     </>
   )
 }
