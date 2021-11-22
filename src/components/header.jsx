@@ -35,9 +35,11 @@ const Header = () => (
         />
       </Box>
 
-      <Text as="strong" fontSize="2.2em" color="white"
+      <Text as="strong" color="white"
         bgGradient="linear(to-r, blue.500, teal.200)"
         bgClip="text"
+        align="center"
+        fontSize={{ md: "2.2em", base: "1.6em" }}
       >
         Gabriel Sebastian Hidayat
       </Text>
