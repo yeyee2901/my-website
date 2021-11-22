@@ -18,7 +18,6 @@ const Main = () => {
     [location.pathname]
   )
 
-
   return (
     <>
       <Font />
