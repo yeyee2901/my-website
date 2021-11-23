@@ -52,7 +52,6 @@ const Footer = ({ ...props }) => {
           bgColor="white"
           target="_blank"
         />
-
       </Container>
 
       <Text as="p" align="center" mt={5}>
@@ -63,5 +62,3 @@ const Footer = ({ ...props }) => {
 }
 
 export default Footer
-
-

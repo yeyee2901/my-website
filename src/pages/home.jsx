@@ -13,15 +13,15 @@ const Home = () => {
 
         <Text align="justify">
           Even though my name is Gabriel, I should also mention that people
-          usually call me &apos; yeyee &apos;. How did I ended up getting that name?
-          When I was around 5 years old, I cannot properly pronounce my name,
-          and at that time I was addicted to
+          usually call me &apos; yeyee &apos;. How did I ended up getting that
+          name? When I was around 5 years old, I cannot properly pronounce my
+          name, and at that time I was addicted to
           <Link
             color={MyColor.active}
             children=" this song "
-            href='https://www.youtube.com/watch?v=_0MBcxyTjus'
+            href="https://www.youtube.com/watch?v=_0MBcxyTjus"
             target="blank"
-            _hover={{ bg: MyColor.active, color: "black" }}
+            _hover={{ bg: MyColor.active, color: 'black' }}
             borderRadius="lg"
           />
           .
@@ -38,31 +38,28 @@ const Home = () => {
           <Link
             color={MyColor.active}
             children=" Universitas Katolik Widya Mandala"
-            href='https://ukwms.ac.id/'
+            href="https://ukwms.ac.id/"
             target="_blank"
-            _hover={{ bg: MyColor.active, color: "black" }}
+            _hover={{ bg: MyColor.active, color: 'black' }}
             borderRadius="lg"
-          />, with telecommunication as my main focus of study.
-          In my study, I have gained a huge interest towards programming, and embedded
-          systems design, and PCB design. I&apos;m a bit kind of introverted, but I will try
-          to keep up with other people! *and also, I can play a bit of guitar & piano
+          />
+          , with telecommunication as my main focus of study. In my study, I
+          have gained a huge interest towards programming, and embedded systems
+          design, and PCB design. I&apos;m a bit kind of introverted, but I will
+          try to keep up with other people! *and also, I can play a bit of
+          guitar & piano
         </Text>
 
-        <Box
-          mt={2}
-          display="flex"
-          justifyContent="space-evenly"
-        >
+        <Box mt={2} display="flex" justifyContent="space-evenly">
           <Image
             src="assets/WM_Kalijudan.jpg"
-            borderRadius={{ base: "full", md: "lg" }}
-            boxSize={{ base: "250px" }}
+            borderRadius={{ base: 'full', md: 'lg' }}
+            boxSize={{ base: '250px' }}
           />
         </Box>
         <StyledHeading fontSize="1.2em" bg={MyColor.semi_dark}>
           My Campus
         </StyledHeading>
-
       </BoxSection>
 
       <BoxSection mb={4}>
@@ -80,7 +77,6 @@ const Home = () => {
             <li>Linux 🐧</li>
           </ul>
         </Box>
-
       </BoxSection>
     </>
   )

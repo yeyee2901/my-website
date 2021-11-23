@@ -5,7 +5,8 @@
   "main": "index.jsx",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "prettier": "prettier -w ."
   },
   "keywords": [],
   "author": "Yeyee2901<gabriel777sh@gmail.com>",
@@ -16,7 +17,6 @@
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "framer-motion": "^4.1.17",
-    "gh-pages": "^3.2.3",
     "history": "^5.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -41,7 +41,8 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0"
+    "@babel/preset-react": "^7.16.0",
+    "prettier": "^2.4.1"
   },
   "presets": [
     "@babel/preset-env",

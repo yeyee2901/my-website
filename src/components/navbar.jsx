@@ -1,23 +1,26 @@
 /* NAVBAR
-  * Navbar terdiri dari 2 mode, yaitu untuk view mobile & desktop
-  * - Desktop: tampil di top, active = diberi bg terang
-  * - Mobile: di hide di menu list (icon: hamburger)
-  * */
+ * Navbar terdiri dari 2 mode, yaitu untuk view mobile & desktop
+ * - Desktop: tampil di top, active = diberi bg terang
+ * - Mobile: di hide di menu list (icon: hamburger)
+ * */
 import StyledHeading from '../components/styled_heading'
 import MyColors from '../colors'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import {
   Box,
   HStack,
-  MenuButton, Menu, MenuList, MenuItem,
+  MenuButton,
+  Menu,
+  MenuList,
+  MenuItem,
   Link as ChakraLink
 } from '@chakra-ui/react'
 
 const LinkItem = ({ children, href, ...props }) => {
   const is_active = useLocation().pathname === href
   const active_bg = is_active ? MyColors.active : MyColors.dark
-  const active_color = is_active ? "black" : "white"
+  const active_color = is_active ? 'black' : 'white'
 
   return (
     <Box width="100%">
@@ -38,9 +41,7 @@ const LinkItem = ({ children, href, ...props }) => {
   )
 }
 
-
 const Navbar = () => {
-
   return (
     <Box p={3} bg={MyColors.very_dark}>
       <Box
@@ -51,20 +52,14 @@ const Navbar = () => {
         alignItems="end"
       >
         <HStack>
-          <LinkItem href="/">
-            Home
-          </LinkItem>
-          <LinkItem href="/works">
-            Works
-          </LinkItem>
-          <LinkItem href="/About">
-            About
-          </LinkItem>
+          <LinkItem href="/">Home</LinkItem>
+          <LinkItem href="/works">Works</LinkItem>
+          <LinkItem href="/About">About</LinkItem>
           <Box width="100%">
             <ChakraLink
               href="https://github.com/yeyee2901/my-website"
               target="_blank"
-              _hover={{ textDecoration: "none" }}
+              _hover={{ textDecoration: 'none' }}
             >
               <StyledHeading
                 size="m"
@@ -83,25 +78,23 @@ const Navbar = () => {
 
       <Box
         p={2}
-        width='100%'
+        width="100%"
         borderRadius="lg"
         display={{ base: 'inline-flex', md: 'none' }}
         justifyContent="space-between"
       >
         <StyledHeading fontSize="1.7em" bg={MyColors.very_dark}>
-          <Link to="/">
-            Yeyee&apos;s Homepage
-          </Link>
+          <Link to="/">Yeyee&apos;s Homepage</Link>
         </StyledHeading>
         <Menu autoSelect={false}>
           <MenuButton
             color="white"
             _hover={{
               bg: MyColors.secondary,
-              borderRadius: "lg"
+              borderRadius: 'lg'
             }}
             _expanded={{
-              borderRadius: "lg",
+              borderRadius: 'lg',
               color: MyColors.active
             }}
           >
@@ -113,26 +106,21 @@ const Navbar = () => {
             borderWidth="4px"
           >
             <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/">
-                Home
-              </LinkItem>
+              <LinkItem href="/">Home</LinkItem>
             </MenuItem>
             <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/works">
-                Works
-              </LinkItem>
+              <LinkItem href="/works">Works</LinkItem>
             </MenuItem>
             <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/about">
-                About
-              </LinkItem>
+              <LinkItem href="/about">About</LinkItem>
             </MenuItem>
             <MenuItem _hover={{ bg: MyColors.dark }}>
               <Box width="100%">
                 <ChakraLink
                   href="https://github.com/yeyee2901/my-website"
                   target="_blank"
-                  _hover={{ textDecoration: "none" }}>
+                  _hover={{ textDecoration: 'none' }}
+                >
                   <StyledHeading
                     size="m"
                     color="white"
@@ -148,7 +136,7 @@ const Navbar = () => {
           </MenuList>
         </Menu>
       </Box>
-    </Box >
+    </Box>
   )
 }
 

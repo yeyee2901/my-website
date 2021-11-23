@@ -7,11 +7,7 @@ import { Outlet } from 'react-router-dom'
 import { Box } from '@chakra-ui/react'
 
 const Layout = () => (
-  <Box
-    bg={MyColor.dark}
-    h="100%"
-    minH="100vh"
-  >
+  <Box bg={MyColor.dark} h="100%" minH="100vh">
     <Navbar />
     <Header />
 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 // create custom component with forwarded transition property
 const Section = chakra(motion.div, {
   shouldForwardProp: prop => {
-    return shouldForwardProp(prop) || prop === "transition"
+    return shouldForwardProp(prop) || prop === 'transition'
   }
 })
 

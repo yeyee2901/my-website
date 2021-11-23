@@ -13,13 +13,9 @@ const Header = () => (
     bg="gray.800"
   >
     <VStack>
-      <Box
-        display={{ base: "none", md: "block" }}
-      >
+      <Box display={{ base: 'none', md: 'block' }}>
         <StyledHeading fontSize="2.3em">
-          <Link to="/">
-            Yeyee&apos;s Homepage
-          </Link>
+          <Link to="/">Yeyee&apos;s Homepage</Link>
         </StyledHeading>
       </Box>
       <Box
@@ -35,26 +31,20 @@ const Header = () => (
         />
       </Box>
 
-      <Text as="strong" color="white"
+      <Text
+        as="strong"
+        color="white"
         bgGradient="linear(to-r, blue.500, teal.200)"
         bgClip="text"
         align="center"
-        fontSize={{ md: "2.2em", base: "1.6em" }}
+        fontSize={{ md: '2.2em', base: '1.6em' }}
       >
         Gabriel Sebastian Hidayat
       </Text>
 
-      <Box
-        borderRadius="lg"
-        p={2}
-        bg="gray.700"
-        color="white"
-      >
-        <strong>
-          Empowering myself with a cup of coffee
-        </strong>
+      <Box borderRadius="lg" p={2} bg="gray.700" color="white">
+        <strong>Empowering myself with a cup of coffee</strong>
       </Box>
-
     </VStack>
   </Box>
 )

@@ -22,13 +22,9 @@ const Main = () => {
     <>
       <Font />
       <TransitionGroup>
-        <CSSTransition
-          timeout={250}
-          classNames="fade"
-          key={location.key}
-        >
+        <CSSTransition timeout={250} classNames="fade" key={location.key}>
           <Routes>
-            <Route path="/" element={<Layout />} >
+            <Route path="/" element={<Layout />}>
               <Route path="" element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="works" element={<Works />} />
@@ -37,7 +33,7 @@ const Main = () => {
         </CSSTransition>
       </TransitionGroup>
     </>
-  );
+  )
 }
 
-export default Main;
+export default Main
