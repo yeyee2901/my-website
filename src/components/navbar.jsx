@@ -74,7 +74,8 @@ const Navbar = () => {
         display={{ base: 'none', md: 'flex' }}
         flexDir="row-reverse"
       >
-        <HStack>
+        <HStack spacing="20px">
+          <ThemeToggleButton />
           <LinkItem
             href="/"
             link_active_fg={link_active_fg}
@@ -113,7 +114,6 @@ const Navbar = () => {
               </Text>
             </ChakraLink>
           </Box>
-          <ThemeToggleButton />
         </HStack>
       </Box>
 
