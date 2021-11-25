@@ -11,7 +11,7 @@ const ThemeToggleButton = ({ children, ...props }) => {
   const fg = useColorModeValue(MyColors.dark.fg, MyColors.light.fg)
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false}>
+    <AnimatePresence exitBeforeEnter initial={true}>
       <motion.div
         key={useColorModeValue('light', 'dark')}
         initial={{ opacity: 0 }}
