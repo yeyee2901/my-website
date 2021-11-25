@@ -43,9 +43,11 @@ const LinkItem = ({ children, href, ...props }) => {
       borderRadius="lg"
       minH="40px"
     >
-      <Text as="strong" fontSize="1.2em">
-        <Link to={href}>{children}</Link>
-      </Text>
+      <Link to={href}>
+        <Text as="strong" fontSize="1.2em">
+          {children}
+        </Text>
+      </Link>
     </Box>
   )
 }
@@ -130,7 +132,7 @@ const Navbar = () => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <Text as="strong" fontSize="1.4em" color={fg}>
+        <Text as="strong" fontSize="1.8em" color={fg}>
           <Link to="/">Yeyee&apos;s Homepage</Link>
         </Text>
 

@@ -1,24 +1,31 @@
-import { Link, Text, Image, Box } from '@chakra-ui/react'
-import MyColor from '../colors'
+import { Link, Text, Image, Box, useColorModeValue } from '@chakra-ui/react'
+import MyColors from '../colors'
 import BoxSection from '../components/box_section'
 
 const Home = () => {
+  const heading_color = useColorModeValue(MyColors.light.bg0, MyColors.dark.fg)
+  const text_color = useColorModeValue(MyColors.light.fg, MyColors.dark.fg)
+  const link_color = useColorModeValue(MyColors.light.bg0, MyColors.dark.active)
+  const link_active_color = useColorModeValue(MyColors.purple, MyColors.yellow)
+
   return (
     <>
       <BoxSection>
-        <Text as="strong">Hello my name is Gabriel!</Text>
+        <Text color={heading_color} as="strong" fontSize="1.4em">
+          Hello my name is Gabriel!
+        </Text>
 
-        <Text align="justify">
+        <Text color={text_color} align="justify">
           Even though my name is Gabriel, I should also mention that people
           usually call me &apos; yeyee &apos;. How did I ended up getting that
           name? When I was around 5 years old, I cannot properly pronounce my
           name, and at that time I was addicted to
           <Link
-            color={MyColor.active}
+            color={link_color}
             children=" this song "
             href="https://www.youtube.com/watch?v=_0MBcxyTjus"
             target="blank"
-            _hover={{ bg: MyColor.active, color: 'black' }}
+            _hover={{ bg: null, color: link_active_color }}
             borderRadius="lg"
           />
           .
@@ -26,16 +33,18 @@ const Home = () => {
       </BoxSection>
 
       <BoxSection m={4}>
-        <Text as="strong">Brief Introduction</Text>
+        <Text as="strong" color={heading_color} fontSize="1.4em">
+          Brief Introduction
+        </Text>
 
-        <Text align="justify">
+        <Text align="justify" color={text_color}>
           Currently, I&apos;m on my 4th year, Electrical Engineering degree, in
           <Link
-            color={MyColor.active}
+            color={link_color}
             children=" Universitas Katolik Widya Mandala"
             href="https://ukwms.ac.id/"
             target="_blank"
-            _hover={{ bg: MyColor.active, color: 'black' }}
+            _hover={{ bg: null, color: link_active_color }}
             borderRadius="lg"
           />
           , with telecommunication as my main focus of study. In my study, I
@@ -45,21 +54,35 @@ const Home = () => {
           guitar & piano
         </Text>
 
-        <Box mt={2} display="flex" justifyContent="space-evenly">
+        <Box
+          mt={2}
+          display="flex"
+          justifyContent="space-evenly"
+          alignContent="center"
+        >
           <Image
             src="assets/WM_Kalijudan.jpg"
             borderRadius={{ base: 'full', md: 'lg' }}
             boxSize={{ base: '250px' }}
           />
         </Box>
-        <Text as="strong">My Campus</Text>
+        <Text
+          as="strong"
+          color={text_color}
+          fontSize="1.2em"
+          mt={3}
+          display="flex"
+          justifyContent="center"
+        >
+          My Campus
+        </Text>
       </BoxSection>
 
       <BoxSection mb={4}>
-        <Text as="strong" fontSize="2em" color="white">
+        <Text as="strong" fontSize="1.4em" color={heading_color}>
           Favorites
         </Text>
-        <Box p={4}>
+        <Box p={4} color={text_color}>
           <ul>
             <li>Guitar (fingerstyle, metal, rock & shred) 🎸</li>
             <li>Piano 🎹</li>
