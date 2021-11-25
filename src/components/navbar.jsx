@@ -24,10 +24,6 @@ const LinkItem = ({ children, href, ...props }) => {
   // Theming
   const { link_active_bg, link_active_fg, link_inactive_fg } = props
 
-  useEffect(() => {
-    console.log('navbars remounted')
-  }, [])
-
   const is_active = useLocation().pathname === href
   const bg = is_active ? link_active_bg : 'none'
   const fg = is_active ? link_active_fg : link_inactive_fg
@@ -55,8 +51,6 @@ const LinkItem = ({ children, href, ...props }) => {
 const Navbar = () => {
   const fg = useColorModeValue(MyColors.dark.fg, MyColors.dark.fg)
   const bg0 = useColorModeValue(MyColors.light.bg0, MyColors.dark.bg0)
-  const bg1 = useColorModeValue(MyColors.light.bg1, MyColors.dark.bg1)
-  const bg2 = useColorModeValue(MyColors.light.bg2, MyColors.dark.bg2)
 
   const link_active_bg = useColorModeValue(
     MyColors.yellow,

@@ -16,8 +16,8 @@ const my_colors = {
     bg3: 'white',
     active: 'blue.500'
   },
-  yellow: "yellow.400",
-  purple: "purple"
+  yellow: 'yellow.400',
+  purple: 'purple'
 }
 
 export default my_colors

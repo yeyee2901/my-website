@@ -1,12 +1,12 @@
-import { Box, Button, useColorModeValue, useColorMode } from '@chakra-ui/react'
+import { Button, useColorModeValue, useColorMode } from '@chakra-ui/react'
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import MyColors from '../colors'
 
 const ThemeToggleButton = ({ children, ...props }) => {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { toggleColorMode } = useColorMode()
 
   const icon = useColorModeValue(<MoonIcon />, <SunIcon />)
-  const bg = useColorModeValue(MyColors.dark.bg0, MyColors.yellow)
+  const bg = useColorModeValue(MyColors.purple, MyColors.yellow)
   const fg = useColorModeValue(MyColors.dark.fg, MyColors.light.fg)
 
   return (
@@ -18,10 +18,10 @@ const ThemeToggleButton = ({ children, ...props }) => {
       color={fg}
       onClick={toggleColorMode}
       {...props}
-    _hover={{
-      bg: MyColors.dark.bg2,
-      color: MyColors.yellow
-    }}
+      _hover={{
+        bg: MyColors.dark.bg2,
+        color: MyColors.yellow
+      }}
     >
       {icon}
     </Button>

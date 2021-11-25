@@ -1,3 +1,4 @@
+import Header from '../components/header'
 import { Link, Text, Image, Box, useColorModeValue } from '@chakra-ui/react'
 import MyColors from '../colors'
 import BoxSection from '../components/box_section'
@@ -10,6 +11,7 @@ const Home = () => {
 
   return (
     <>
+      <Header />
       <BoxSection>
         <Text color={heading_color} as="strong" fontSize="1.4em">
           Hello my name is Gabriel!
