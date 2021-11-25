@@ -1,7 +1,6 @@
 import { Box, Link, Text } from '@chakra-ui/react'
 import MyColor from '../colors'
 import BoxSection from '../components/box_section'
-import StyledHeading from '../components/styled_heading'
 
 const About = () => {
   return (

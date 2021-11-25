@@ -1,4 +1,3 @@
-import StyledHeading from '../components/styled_heading'
 import BoxSection from '../components/box_section'
 import MyColors from '../colors'
 import { Text, Box, Image, Link } from '@chakra-ui/react'
@@ -6,11 +5,11 @@ import { Text, Box, Image, Link } from '@chakra-ui/react'
 const WorkBox = ({ children, title, link, ...props }) => {
   return (
     <BoxSection mb={5} {...props} align="center" p={2} pt={4}>
-      <StyledHeading bg={MyColors.semi_dark} fontSize="1.2em" w="90%">
+      <Text as="strong">
         <Link href={link} target="_blank" p={3}>
           {title}
         </Link>
-      </StyledHeading>
+      </Text>
 
       {children}
 

@@ -1,4 +1,3 @@
-import StyledHeading from '../components/styled_heading'
 import { Box, Image, VStack, Text } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import MyColors from '../colors'
@@ -14,9 +13,9 @@ const Header = () => (
   >
     <VStack>
       <Box display={{ base: 'none', md: 'block' }}>
-        <StyledHeading fontSize="2.3em">
+        <Text as="strong">
           <Link to="/">Yeyee&apos;s Homepage</Link>
-        </StyledHeading>
+        </Text>
       </Box>
       <Box
         borderWidth="thick"

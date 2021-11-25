@@ -1,5 +1,4 @@
 import { Link, Text, Image, Box } from '@chakra-ui/react'
-import StyledHeading from '../components/styled_heading'
 import MyColor from '../colors'
 import BoxSection from '../components/box_section'
 
@@ -7,9 +6,7 @@ const Home = () => {
   return (
     <>
       <BoxSection>
-        <StyledHeading align="left" fontSize="2em" bg={MyColor.semi_dark}>
-          Hello my name is Gabriel!
-        </StyledHeading>
+        <Text as="strong">Hello my name is Gabriel!</Text>
 
         <Text align="justify">
           Even though my name is Gabriel, I should also mention that people
@@ -29,9 +26,7 @@ const Home = () => {
       </BoxSection>
 
       <BoxSection m={4}>
-        <StyledHeading align="left" fontSize="2em" bg={MyColor.semi_dark}>
-          Brief Introduction
-        </StyledHeading>
+        <Text as="strong">Brief Introduction</Text>
 
         <Text align="justify">
           Currently, I&apos;m on my 4th year, Electrical Engineering degree, in
@@ -57,9 +52,7 @@ const Home = () => {
             boxSize={{ base: '250px' }}
           />
         </Box>
-        <StyledHeading fontSize="1.2em" bg={MyColor.semi_dark}>
-          My Campus
-        </StyledHeading>
+        <Text as="strong">My Campus</Text>
       </BoxSection>
 
       <BoxSection mb={4}>

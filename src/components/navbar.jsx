@@ -3,76 +3,121 @@
  * - Desktop: tampil di top, active = diberi bg terang
  * - Mobile: di hide di menu list (icon: hamburger)
  * */
-import StyledHeading from '../components/styled_heading'
 import MyColors from '../colors'
+import ThemeToggleButton from './theme-toggle-btn'
+import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import {
+  Text,
   Box,
   HStack,
   MenuButton,
   Menu,
   MenuList,
   MenuItem,
-  Link as ChakraLink
+  Link as ChakraLink,
+  useColorModeValue
 } from '@chakra-ui/react'
 
 const LinkItem = ({ children, href, ...props }) => {
+  // Theming
+  const { link_active_bg, link_active_fg, link_inactive_fg } = props
+
+  useEffect(() => {
+    console.log('navbars remounted')
+  }, [])
+
   const is_active = useLocation().pathname === href
-  const active_bg = is_active ? MyColors.active : MyColors.dark
-  const active_color = is_active ? 'black' : 'white'
+  const bg = is_active ? link_active_bg : 'none'
+  const fg = is_active ? link_active_fg : link_inactive_fg
 
   return (
-    <Box width="100%">
-      <Link to={href}>
-        <StyledHeading
-          size="m"
-          color={active_color}
-          bg={active_bg}
-          borderRadius="lg"
-          p={2}
-          align="center"
-          {...props}
-        >
-          {children}
-        </StyledHeading>
-      </Link>
+    <Box
+      width="100%"
+      bg={bg}
+      color={fg}
+      display="flex"
+      alignItems="center"
+      justifyContent="space-around"
+      borderRadius="lg"
+      minH="40px"
+    >
+      <Text as="strong" fontSize="1.2em">
+        <Link to={href}>{children}</Link>
+      </Text>
     </Box>
   )
 }
 
 const Navbar = () => {
+  const fg = useColorModeValue(MyColors.dark.fg, MyColors.dark.fg)
+  const bg0 = useColorModeValue(MyColors.light.bg0, MyColors.dark.bg0)
+  const bg1 = useColorModeValue(MyColors.light.bg1, MyColors.dark.bg1)
+  const bg2 = useColorModeValue(MyColors.light.bg2, MyColors.dark.bg2)
+
+  const link_active_bg = useColorModeValue(
+    MyColors.yellow,
+    MyColors.dark.active
+  )
+  const link_inactive_bg = useColorModeValue(
+    MyColors.light.bg0,
+    MyColors.dark.bg2
+  )
+  const link_active_fg = useColorModeValue(MyColors.light.fg, MyColors.dark.fg)
+  const link_inactive_fg = useColorModeValue(
+    MyColors.light.bg2,
+    MyColors.dark.fg
+  )
+
   return (
-    <Box p={3} bg={MyColors.very_dark}>
+    <Box p={3} bg={bg0}>
       <Box
         pt={1}
         width="100%"
         display={{ base: 'none', md: 'flex' }}
-        flexDir={{ base: 'row', md: 'column' }}
-        alignItems="end"
+        flexDir="row-reverse"
       >
         <HStack>
-          <LinkItem href="/">Home</LinkItem>
-          <LinkItem href="/works">Works</LinkItem>
-          <LinkItem href="/About">About</LinkItem>
-          <Box width="100%">
+          <LinkItem
+            href="/"
+            link_active_fg={link_active_fg}
+            link_inactive_fg={link_inactive_fg}
+            link_active_bg={link_active_bg}
+            link_inactive_bg={link_inactive_bg}
+          >
+            Home
+          </LinkItem>
+          <LinkItem
+            href="/works"
+            link_active_fg={link_active_fg}
+            link_inactive_fg={link_inactive_fg}
+            link_active_bg={link_active_bg}
+            link_inactive_bg={link_inactive_bg}
+          >
+            Works
+          </LinkItem>
+          <LinkItem
+            href="/About"
+            link_active_fg={link_active_fg}
+            link_inactive_fg={link_inactive_fg}
+            link_active_bg={link_active_bg}
+            link_inactive_bg={link_inactive_bg}
+          >
+            About
+          </LinkItem>
+          <Box width="100%" p={1} textAlign="center">
             <ChakraLink
               href="https://github.com/yeyee2901/my-website"
               target="_blank"
               _hover={{ textDecoration: 'none' }}
             >
-              <StyledHeading
-                size="m"
-                color="white"
-                bg={MyColors.dark}
-                p={2}
-                align="center"
-                minW="130px"
-              >
+              <Text fontSize="1.2em" as="strong" color={link_inactive_fg}>
                 Page Source
-              </StyledHeading>
+              </Text>
             </ChakraLink>
           </Box>
+          <ThemeToggleButton />
         </HStack>
       </Box>
 
@@ -80,61 +125,88 @@ const Navbar = () => {
         p={2}
         width="100%"
         borderRadius="lg"
-        display={{ base: 'inline-flex', md: 'none' }}
+        display={{ base: 'flex', md: 'none' }}
+        flexDir="row"
         justifyContent="space-between"
+        alignItems="center"
       >
-        <StyledHeading fontSize="1.7em" bg={MyColors.very_dark}>
+        <Text as="strong" fontSize="1.4em" color={fg}>
           <Link to="/">Yeyee&apos;s Homepage</Link>
-        </StyledHeading>
-        <Menu autoSelect={false}>
-          <MenuButton
-            color="white"
-            _hover={{
-              bg: MyColors.secondary,
-              borderRadius: 'lg'
-            }}
-            _expanded={{
-              borderRadius: 'lg',
-              color: MyColors.active
-            }}
-          >
-            <HamburgerIcon boxSize={8} />
-          </MenuButton>
-          <MenuList
-            bg={MyColors.dark}
-            borderColor={MyColors.active}
-            borderWidth="4px"
-          >
-            <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/">Home</LinkItem>
-            </MenuItem>
-            <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/works">Works</LinkItem>
-            </MenuItem>
-            <MenuItem _hover={{ bg: MyColors.dark }}>
-              <LinkItem href="/about">About</LinkItem>
-            </MenuItem>
-            <MenuItem _hover={{ bg: MyColors.dark }}>
-              <Box width="100%">
-                <ChakraLink
-                  href="https://github.com/yeyee2901/my-website"
-                  target="_blank"
-                  _hover={{ textDecoration: 'none' }}
+        </Text>
+
+        <Box
+          minW="100px"
+          maxW="25vh"
+          display="flex"
+          justifyContent="space-evenly"
+        >
+          <ThemeToggleButton />
+          <Menu autoSelect={false}>
+            <MenuButton
+              color="white"
+              _hover={{
+                bg: MyColors.secondary,
+                borderRadius: 'lg'
+              }}
+              _expanded={{
+                borderRadius: 'lg',
+                color: MyColors.active
+              }}
+              maxH="40px"
+              minV="40px"
+            >
+              <HamburgerIcon boxSize={8} />
+            </MenuButton>
+            <MenuList bg={bg0} borderColor={fg} borderWidth="4px">
+              <MenuItem _hover={{ bg: MyColors.dark }}>
+                <LinkItem
+                  href="/"
+                  link_active_fg={link_active_fg}
+                  link_inactive_fg={link_inactive_fg}
+                  link_active_bg={link_active_bg}
+                  link_inactive_bg={link_inactive_bg}
                 >
-                  <StyledHeading
-                    size="m"
-                    color="white"
-                    bg={MyColors.dark}
-                    p={2}
-                    align="center"
+                  Home
+                </LinkItem>
+              </MenuItem>
+              <MenuItem _hover={{ bg: MyColors.dark }}>
+                <LinkItem
+                  href="/works"
+                  link_active_fg={link_active_fg}
+                  link_inactive_fg={link_inactive_fg}
+                  link_active_bg={link_active_bg}
+                  link_inactive_bg={link_inactive_bg}
+                >
+                  Works
+                </LinkItem>
+              </MenuItem>
+              <MenuItem _hover={{ bg: MyColors.dark }}>
+                <LinkItem
+                  href="/about"
+                  link_active_fg={link_active_fg}
+                  link_inactive_fg={link_inactive_fg}
+                  link_active_bg={link_active_bg}
+                  link_inactive_bg={link_inactive_bg}
+                >
+                  About
+                </LinkItem>
+              </MenuItem>
+              <MenuItem _hover={{ bg: MyColors.dark }}>
+                <Box width="100%" p={1} textAlign="center">
+                  <ChakraLink
+                    href="https://github.com/yeyee2901/my-website"
+                    target="_blank"
+                    _hover={{ textDecoration: 'none' }}
                   >
-                    Page Source
-                  </StyledHeading>
-                </ChakraLink>
-              </Box>
-            </MenuItem>
-          </MenuList>
-        </Menu>
+                    <Text fontSize="1.2em" as="strong" color={link_inactive_fg}>
+                      Page Source
+                    </Text>
+                  </ChakraLink>
+                </Box>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+        </Box>
       </Box>
     </Box>
   )

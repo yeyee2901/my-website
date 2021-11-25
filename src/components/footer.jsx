@@ -1,7 +1,6 @@
 import { Box, Container, Text } from '@chakra-ui/react'
 import { SocialIcon } from 'react-social-icons'
 import MyColor from '../colors'
-import StyledHeading from './styled_heading'
 
 const Footer = ({ ...props }) => {
   return (
@@ -15,9 +14,7 @@ const Footer = ({ ...props }) => {
       flexDir="column"
       justifyContent="space-around"
     >
-      <StyledHeading fontSize="2em" align="center" bg={MyColor.very_dark}>
-        Find me on:
-      </StyledHeading>
+      <Text as="strong">Find me on:</Text>
 
       <Container
         display="flex"
