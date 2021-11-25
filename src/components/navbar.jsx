@@ -5,7 +5,6 @@
  * */
 import MyColors from '../colors'
 import ThemeToggleButton from './theme-toggle-btn'
-import { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import {

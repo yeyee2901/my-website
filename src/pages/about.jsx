@@ -89,7 +89,9 @@ const About = () => {
           About this page
         </Text>
 
-        <Text color={text_color} as="p">This page is made possible using:</Text>
+        <Text color={text_color} as="p">
+          This page is made possible using:
+        </Text>
         <Box p={2} color={text_color}>
           <ul>
             <li>
