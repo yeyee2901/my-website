@@ -16,7 +16,7 @@ const Layout = () => {
       <Header />
 
       <AnimatedSection
-        delay={0.2}
+        delay={0.4}
         bg={bg1}
         height="100%"
         display="flex"

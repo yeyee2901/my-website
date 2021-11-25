@@ -13,7 +13,7 @@ const AnimatedSection = ({ children, delay = 0, ...props }) => {
     <Section
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.8, delay: delay }}
+      transition={{ duration: 1, delay: delay }}
       {...props}
     >
       {children}
