@@ -1,22 +1,27 @@
-import { Box, Link, Text } from '@chakra-ui/react'
-import MyColor from '../colors'
+import { Box, Link, Text, useColorModeValue } from '@chakra-ui/react'
+import MyColors from '../colors'
 import BoxSection from '../components/box_section'
 
 const About = () => {
+  const heading_color = useColorModeValue(MyColors.light.bg0, MyColors.dark.fg)
+  const text_color = useColorModeValue(MyColors.light.fg, MyColors.dark.fg)
+  const link_color = useColorModeValue(MyColors.light.bg0, MyColors.dark.active)
+  const active_link_color = useColorModeValue(MyColors.purple, MyColors.yellow)
+
   return (
     <>
-      <BoxSection mb={4} color="white">
-        <Text as="strong" fontSize="1.4em">
+      <BoxSection mb={4}>
+        <Text as="strong" color={heading_color} fontSize="1.4em">
           Gabriel is..
         </Text>
-        <Text as="p">
+        <Text as="p" color={text_color}>
           currently a student at
           <Link
-            color={MyColor.active}
+            color={link_color}
             children=" Universitas Katolik Widya Mandala"
             href="https://ukwms.ac.id/"
             target="_blank"
-            _hover={{ bg: MyColor.active, color: 'black' }}
+            _hover={{ bg: null, color: active_link_color }}
             borderRadius="lg"
           />
           , with telecommunication as his main focus of study. He was born on
@@ -48,11 +53,11 @@ const About = () => {
         </Text>
       </BoxSection>
 
-      <BoxSection mb={4} color="white">
-        <Text as="strong" fontSize="1.4em">
+      <BoxSection mb={4}>
+        <Text as="strong" color={heading_color} fontSize="1.4em">
           Technologies
         </Text>
-        <Box p={3}>
+        <Box p={3} color={text_color}>
           <ul>
             <li>Linux</li>
             <li>PCB Design</li>
@@ -68,10 +73,10 @@ const About = () => {
           </ul>
         </Box>
 
-        <Text as="strong" fontSize="1.4em">
+        <Text as="strong" color={heading_color} fontSize="1.4em">
           Embedded System Technologies
         </Text>
-        <Box p={3}>
+        <Box color={text_color} p={3}>
           <ul>
             <li>AVR Microcontrollers</li>
             <li>Arduino Family</li>
@@ -79,18 +84,18 @@ const About = () => {
         </Box>
       </BoxSection>
 
-      <BoxSection mb={4} color="white">
-        <Text as="strong" fontSize="1.4em">
+      <BoxSection mb={4}>
+        <Text as="strong" color={heading_color} fontSize="1.4em">
           About this page
         </Text>
 
-        <Text as="p">This page is made possible using:</Text>
-        <Box p={2}>
+        <Text color={text_color} as="p">This page is made possible using:</Text>
+        <Box p={2} color={text_color}>
           <ul>
             <li>
               <Link
                 href="https://reactjs.org"
-                color={MyColor.active}
+                color={link_color}
                 children="React JS "
                 target="_blank"
               />
@@ -99,7 +104,7 @@ const About = () => {
             <li>
               <Link
                 href="https://chakra-ui.com/"
-                color={MyColor.active}
+                color={link_color}
                 children="Chakra UI "
                 target="_blank"
               />
@@ -108,7 +113,7 @@ const About = () => {
             <li>
               <Link
                 href="https://reactrouter.com/"
-                color={MyColor.active}
+                color={link_color}
                 children="React Router "
                 target="_blank"
               />
@@ -117,7 +122,7 @@ const About = () => {
             <li>
               <Link
                 href="https://www.netlify.com/"
-                color={MyColor.active}
+                color={link_color}
                 children="Netlify "
                 target="_blank"
               />
