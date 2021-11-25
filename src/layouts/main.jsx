@@ -21,8 +21,8 @@ const Layout = () => (
       alignItems="center"
     >
       <Outlet />
-      <Footer />
     </AnimatedSection>
+    <Footer />
   </Box>
 )
 
