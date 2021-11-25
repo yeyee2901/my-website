@@ -145,12 +145,13 @@ const Navbar = () => {
             <MenuButton
               color="white"
               _hover={{
-                bg: MyColors.secondary,
-                borderRadius: 'lg'
+                bg: bg0,
+                borderRadius: 'lg',
+                color: fg
               }}
               _expanded={{
                 borderRadius: 'lg',
-                color: MyColors.active
+                color: fg
               }}
               maxH="40px"
               minV="40px"
@@ -158,7 +159,7 @@ const Navbar = () => {
               <HamburgerIcon boxSize={8} />
             </MenuButton>
             <MenuList bg={bg0} borderColor={fg} borderWidth="4px">
-              <MenuItem _hover={{ bg: MyColors.dark }}>
+              <MenuItem _hover={{ bg: bg0 }}>
                 <LinkItem
                   href="/"
                   link_active_fg={link_active_fg}
@@ -169,7 +170,7 @@ const Navbar = () => {
                   Home
                 </LinkItem>
               </MenuItem>
-              <MenuItem _hover={{ bg: MyColors.dark }}>
+              <MenuItem _hover={{ bg: bg0 }}>
                 <LinkItem
                   href="/works"
                   link_active_fg={link_active_fg}
@@ -180,7 +181,7 @@ const Navbar = () => {
                   Works
                 </LinkItem>
               </MenuItem>
-              <MenuItem _hover={{ bg: MyColors.dark }}>
+              <MenuItem _hover={{ bg: bg0 }}>
                 <LinkItem
                   href="/about"
                   link_active_fg={link_active_fg}
@@ -191,7 +192,7 @@ const Navbar = () => {
                   About
                 </LinkItem>
               </MenuItem>
-              <MenuItem _hover={{ bg: MyColors.dark }}>
+              <MenuItem _hover={{ bg: bg0 }}>
                 <Box width="100%" p={1} textAlign="center">
                   <ChakraLink
                     href="https://github.com/yeyee2901/my-website"
