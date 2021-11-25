@@ -2,28 +2,33 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 import Navbar from '../components/navbar'
 import AnimatedSection from '../components/section'
-import MyColor from '../colors'
+import MyColors from '../colors'
 import { Outlet } from 'react-router-dom'
-import { Box } from '@chakra-ui/react'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 
-const Layout = () => (
-  <Box bg={MyColor.dark} h="100%" minH="100vh">
-    <Navbar />
-    <Header />
+const Layout = () => {
+  const bg0 = useColorModeValue(MyColors.light.bg0, MyColors.dark.bg0)
+  const bg1 = useColorModeValue(MyColors.light.bg1, MyColors.dark.bg1)
 
-    <AnimatedSection
-      delay={0.2}
-      bg={MyColor.dark}
-      height="100%"
-      display="flex"
-      flexGrow={1}
-      flexDir="column"
-      alignItems="center"
-    >
-      <Outlet />
-    </AnimatedSection>
-    <Footer />
-  </Box>
-)
+  return (
+    <Box bg={bg0} h="100%" minH="100vh">
+      <Navbar />
+      <Header />
+
+      <AnimatedSection
+        delay={0.2}
+        bg={bg1}
+        height="100%"
+        display="flex"
+        flexGrow={1}
+        flexDir="column"
+        alignItems="center"
+      >
+        <Outlet />
+      </AnimatedSection>
+      <Footer />
+    </Box>
+  )
+}
 
 export default Layout
