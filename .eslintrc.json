@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "plugins": ["react", "import", "react-hooks"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "no-unused-labels": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+
+    "no-var": "error",
+    "camelcase": [
+      "error",
+      {
+        "properties": "always"
+      }
+    ],
+
+    "eqeqeq": "error",
+    "default-case": "warn",
+    "default-case-last": "error",
+    "no-sequences": "error",
+    "react/display-name": 0,
+    "react/react-in-jsx-scope": "off"
+  }
+}

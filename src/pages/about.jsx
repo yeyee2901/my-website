@@ -18,12 +18,13 @@ const About = () => {
           currently a student at
           <Link
             color={link_color}
-            children=" Universitas Katolik Widya Mandala"
             href="https://ukwms.ac.id/"
             target="_blank"
             _hover={{ bg: null, color: active_link_color }}
             borderRadius="lg"
-          />
+          >
+            {` Universitas Katolik Widya Mandala `}
+          </Link>
           , with telecommunication as his main focus of study. He was born on
           29th January, 2000, in Surabaya, Indonesia. His interest in
           technologies had sparked since he was in kindergarten life, where he
@@ -42,9 +43,9 @@ const About = () => {
           degree, because he likes the hardware part of computers and how
           computer programs interact with the user and the hardware, basically
           understanding how computers do things. Also, he has a huge interest in
-          Machine Learning and he thinks it's beneficial for tech-geeks like us
-          to understand it since it will be beneficial regardless of what your
-          field of expertise in technology is.
+          Machine Learning and he thinks it&apos;s beneficial for tech-geeks
+          like us to understand it since it will be beneficial regardless of
+          what your field of expertise in technology is.
           <br />
           <br />
           Currently, Gabriel is focusing on his last year of college, while also
